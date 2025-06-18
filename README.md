@@ -1,4 +1,4 @@
-# journal-app
+# Journal-app
 
 In the project directory, you can run:
 
