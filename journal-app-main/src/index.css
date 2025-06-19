@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Theme Variables */
+:root {
+  --bg: linear-gradient(135deg, #e0f7fa, #fce4ec);
+  --card-bg: #ffffff;
+  --primary: #4a90e2;
+  --secondary: #7e57c2;
+  --text-dark: #333333;
+  --text-muted: #666666;
+  --border: #e0e0e0;
+  --hover-bg: #f0f4ff;
+  --radius: 12px;
+}
+
+/* Reset */
+body, h1, h2, h3, p, a, button, input, textarea, select {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text-dark);
+  padding: 0 15px;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background: #ffffffcc;
+  backdrop-filter: blur(8px);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.navbar h1 {
+  color: var(--primary);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.navbar .links {
+  margin-left: auto;
+}
+
+.navbar a {
+  text-decoration: none;
+  padding: 10px 16px;
+  color: var(--text-dark);
+  border-radius: var(--radius);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+  background: var(--hover-bg);
+  color: var(--primary);
+}
+
+/* Content */
+.content {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Journal Preview */
+.journal-preview {
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #fafafa;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journal-preview:hover {
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.15);
+  transform: translateY(-5px);
+}
+
+.journal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.journal-header h2 {
+  font-size: 22px;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.time-container {
+  background-color: #f1f1f1;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.journal-time {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.journal-preview a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.journal-preview a:hover {
+  color: var(--secondary);
+}
+
+/* Journal Details */
+.journal-details h2 {
+  font-size: 26px;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.journal-details div {
+  margin: 20px 0;
+}
+
+.journal-details button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.journal-details button:hover {
+  background: var(--secondary);
+}
+
+/* Form */
+.create {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.create h2 {
+  font-size: 26px;
+  color: var(--secondary);
+  margin-bottom: 30px;
+}
+
+.create label {
+  text-align: left;
+  display: block;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.create input,
+.create textarea,
+.create select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 15px;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+.create input:focus,
+.create textarea:focus,
+.create select:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.create button {
+  background: var(--primary);
+  color: #fff;
+  border: 0;
+  padding: 12px 25px;
+  border-radius: var(--radius);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.create button:hover {
+  background: var(--secondary);
+}
+
+/* Not Found */
+.not-found {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.not-found h2,
+.not-found p {
+  font-size: 24px;
+  color: var(--text-muted);
+  margin-bottom: 25px;
+}
+
+.not-found button,
+.not-found a.button-link {
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.not-found button:hover,
+.not-found a.button-link:hover {
+  background: var(--secondary);
+}
